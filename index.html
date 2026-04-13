@@ -53,34 +53,6 @@
          <p>点击下方按钮，输入密码后查看我的日记与照片</p>
        <a href="encrypted (1).html" class="contact-btn">验证身份并进入</a>
     </div>
-
-<div style="text-align: center; margin: 20px 0;">
-    <button onclick="copyEmail()" id="emailBtn" 
-        style="cursor: pointer; background: #007bff; color: white; padding: 12px 25px; border-radius: 30px; border: none; font-size: 16px; font-weight: bold;">
-        📧 点击复制邮箱：pipervause0821@gmail.com
-    </button>
-</div>
-
-<script>
-function copyEmail() {
-    var email = "pipervause0821@gmail.com";
-    var btn = document.getElementById("emailBtn");
-
-    // 尝试复制
-    navigator.clipboard.writeText(email).then(function() {
-        var oldText = btn.innerHTML;
-        btn.innerHTML = "✅ 邮箱已复制！";
-        btn.style.background = "#28a745"; // 变成绿色
-        
-        setTimeout(function() {
-            btn.innerHTML = oldText;
-            btn.style.background = "#007bff"; // 恢复蓝色
-        }, 2000);
-    }).catch(function() {
-        // 如果浏览器不支持自动复制，直接弹窗显示
-        alert("你的邮箱是: " + email);
-    });
-}
 </script>
 
 </body>
