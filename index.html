@@ -51,14 +51,32 @@
     <div class="section" style="text-align: center;">
        <h2>🔐 个人私密空间</h2>
          <p>点击下方按钮，输入密码后查看我的日记与照片</p>
-       <a href="encrypted（1）.html" class="contact-btn">验证身份并进入</a>
+       <a href="encrypted (1).html" class="contact-btn">验证身份并进入</a>
     </div>
-    
-    <a href="mailto:pipervause0821@gmail.com" 
-   title="点击给我发邮件" 
-   style="text-decoration: none; background: #333; color: white; padding: 10px 20px; border-radius: 5px;">
-   📧 联系我：pipervause0821@gmail.com
-    </a>
+
+<script>
+function copyEmail() {
+    // 复制邮箱的逻辑
+    var email = "pipervause0821@gmail.com";
+    navigator.clipboard.writeText(email).then(function() {
+        // 复制成功后的反应
+        var btn = document.getElementById("emailBtn");
+        var originalText = btn.innerHTML;
+        
+        btn.innerHTML = "✅ 邮箱已复制！";
+        btn.style.background = "#555";
+        
+        // 2秒后恢复原样
+        setTimeout(function() {
+            btn.innerHTML = originalText;
+            btn.style.background = "#333";
+        }, 2000);
+    }, function() {
+        // 如果自动复制失败，降级处理
+        alert("请手动复制邮箱： " + email);
+    });
+}
+</script>
 
 </body>
 </html>
