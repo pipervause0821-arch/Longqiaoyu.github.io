@@ -54,26 +54,31 @@
        <a href="encrypted (1).html" class="contact-btn">验证身份并进入</a>
     </div>
 
+<div style="text-align: center; margin: 20px 0;">
+    <button onclick="copyEmail()" id="emailBtn" 
+        style="cursor: pointer; background: #007bff; color: white; padding: 12px 25px; border-radius: 30px; border: none; font-size: 16px; font-weight: bold;">
+        📧 点击复制邮箱：pipervause0821@gmail.com
+    </button>
+</div>
+
 <script>
 function copyEmail() {
-    // 复制邮箱的逻辑
     var email = "pipervause0821@gmail.com";
+    var btn = document.getElementById("emailBtn");
+
+    // 尝试复制
     navigator.clipboard.writeText(email).then(function() {
-        // 复制成功后的反应
-        var btn = document.getElementById("emailBtn");
-        var originalText = btn.innerHTML;
-        
+        var oldText = btn.innerHTML;
         btn.innerHTML = "✅ 邮箱已复制！";
-        btn.style.background = "#555";
+        btn.style.background = "#28a745"; // 变成绿色
         
-        // 2秒后恢复原样
         setTimeout(function() {
-            btn.innerHTML = originalText;
-            btn.style.background = "#333";
+            btn.innerHTML = oldText;
+            btn.style.background = "#007bff"; // 恢复蓝色
         }, 2000);
-    }, function() {
-        // 如果自动复制失败，降级处理
-        alert("请手动复制邮箱： " + email);
+    }).catch(function() {
+        // 如果浏览器不支持自动复制，直接弹窗显示
+        alert("你的邮箱是: " + email);
     });
 }
 </script>
