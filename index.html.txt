@@ -23,7 +23,7 @@
         <div class="profile-img">
             <img src="Piper.jpg" alt="我的头像" style="width: 100%; height: auto; display: block;">
         </div>
-        <h1>你好，我是 龙巧玉</h1>
+        <h1>你好，我是龙巧玉</h1>
         <p>这是我的个人作品展示空间</p>
     </header>
 
