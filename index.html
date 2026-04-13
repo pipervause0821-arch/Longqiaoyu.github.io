@@ -16,34 +16,6 @@
         .contact-btn { display: inline-block; background: #007AFF; color: white; padding: 10px 25px; border-radius: 25px; text-decoration: none; margin-top: 20px; transition: 0.3s; }
         .contact-btn:hover { background: #0056b3; }
         .diary-text p {text-indent: 2em; margin-bottom: 15px; }
-        ./* 弹出层的背景 */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.8); /* 黑色半透明背景 */
-    z-index: 999;
-    cursor: zoom-out;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 弹出后的大图 */
-.overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    border: 3px solid white;
-}
-
-/* 页面上的缩略图，鼠标放上去变小手 */
-.thumbnail {
-    cursor: zoom-in;
-    transition: transform 0.2s;
-}
-.thumbnail:hover {
-    transform: scale(1.05); /* 鼠标悬停稍微放大一点点，增加互动感 */
-}
     </style>
 </head>
 <body>
@@ -79,14 +51,14 @@
     <div class="section" style="text-align: center;">
        <h2>🔐 个人私密空间</h2>
          <p>点击下方按钮，输入密码后查看我的日记与照片</p>
-       <a href="encrypted.html" class="contact-btn">验证身份并进入</a>
+       <a href="encrypted（1）.html" class="contact-btn">验证身份并进入</a>
     </div>
     
-    <div class="section" style="text-align: center;">
-        <h2>联系我</h2>
-        <p>想和我聊聊？点击下方按钮发送邮件</p>
-        <a href="mailto:pipervause0821@gmail.com" class="contact-btn">发送邮件</a>
-    </div>
+    <a href="mailto:pipervause0821@gmail.com" 
+   title="点击给我发邮件" 
+   style="text-decoration: none; background: #333; color: white; padding: 10px 20px; border-radius: 5px;">
+   📧 联系我：pipervause0821@gmail.com
+    </a>
 
 </body>
 </html>
